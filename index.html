@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeerFlix223 - Libros Gratis en PDF</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+  <!-- NAV -->
+  <nav>
+    <div class="logo">LeerFlix223</div>
+    <ul class="nav-links">
+      <li onclick="filterCategory('all')">Inicio</li>
+      <li onclick="filterCategory('clasico')">Clásicos</li>
+      <li onclick="filterCategory('ficcion')">Ficción</li>
+      <li onclick="filterCategory('ciencia')">Ciencia</li>
+      <li onclick="filterCategory('historia')">Historia</li>
+    </ul>
+    <input type="text" id="searchInput" placeholder="Buscar libro o autor...">
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1 id="hero-title">Cuentos para salir al recreo</h1>
+      <p id="hero-desc">La mayor obra de la literatura universal. Disponible gratis.</p>
+      <button class="btn primary" onclick="openModal(0)">Vista Previa</button>
+      <a href="pdfs/quijote.pdf" class="btn" id="hero-download" download>⬇ Descargar PDF</a>
+    </div>
+  </section>
+
+  <!-- CONTENIDO -->
+  <main>
+    <section class="section" id="section-all">
+      <h2>Clásicos Literarios</h2>
+      <div class="row" id="row-clasicos"></div>
+    </section>
+
+    <section class="section">
+      <h2>Ficción y Fantasía</h2>
+      <div class="row" id="row-ficcion"></div>
+    </section>
+
+    <section class="section">
+      <h2>Ciencia y Conocimiento</h2>
+      <div class="row" id="row-ciencia"></div>
+    </section>
+  </main>
+
+  <!-- MODAL VISTA PREVIA -->
+  <div id="pdfModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">×</span>
+      <h2 id="modal-title"></h2>
+      <canvas id="pdfCanvas" class="pdf-canvas"></canvas>
+      <div class="modal-buttons">
+        <a id="modal-download-btn" class="btn" download>⬇ Descargar PDF Completo</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>BookFlix - Plataforma educativa gratuita • Solo libros de dominio público</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
