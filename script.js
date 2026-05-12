@@ -4,7 +4,7 @@ const books = [
     title: "Cuentos Para Salir Al Recreo",
     author: "Margarita Maine",
     img: "img/Cuentos_para_salir_al_recreo.jpg",
-    pdf: "pdfs/Cuentos_Para_salir_Al_Recreo.pdf",
+    pdf: "pdfs/Cuentos_Para_Salir_Al_Recreo.pdf",
     category: "clasico"
   },
   {
